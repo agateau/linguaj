@@ -9,6 +9,10 @@
 
     <property name="po-compile-all-path" location="scripts/po-compile-all"/>
 
+    <presetdef name="javac">
+        <javac includeantruntime="false"/>
+    </presetdef>
+
     <target name="clean">
         <delete dir="${build-dir}"/>
         <delete dir="${example-dir}/messages"/>
@@ -21,8 +25,7 @@
 
     <target name="jar" depends="compile">
         <mkdir dir="${jar-dir}"/>
-        <jar destfile="${jar-dir}/${ant.project.name}.jar" basedir="${classes-dir}">
-        </jar>
+        <jar destfile="${jar-dir}/${ant.project.name}.jar" basedir="${classes-dir}"/>
     </target>
 
     <target name="example-po-compile">
