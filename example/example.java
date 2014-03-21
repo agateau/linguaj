@@ -1,6 +1,6 @@
-import com.greenyetilab.babelyeti.Translator;
-import static com.greenyetilab.babelyeti.Translator.tr;
-import static com.greenyetilab.babelyeti.Translator.trn;
+import com.greenyetilab.linguaj.Translator;
+import static com.greenyetilab.linguaj.Translator.tr;
+import static com.greenyetilab.linguaj.Translator.trn;
 
 class Example {
     public static void main(String[] args) {

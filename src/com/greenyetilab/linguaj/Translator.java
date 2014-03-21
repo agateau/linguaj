@@ -1,4 +1,4 @@
-package com.greenyetilab.babelyeti;
+package com.greenyetilab.linguaj;
 
 import java.util.Locale;
 

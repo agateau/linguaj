@@ -1,4 +1,4 @@
-public class Messages_{{ locale }} extends com.greenyetilab.babelyeti.Messages {
+public class Messages_{{ locale }} extends com.greenyetilab.linguaj.Messages {
     public Messages_{{ locale }}() {
         {%- for msgid, msgstr in plain_entries %}
         plainEntries.put("{{ msgid }}", "{{ msgstr }}");

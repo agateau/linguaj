@@ -1,4 +1,4 @@
-babelyeti
-=========
+linguaj
+=======
 
-Simple way to use gettext to translate user visible strings from Java code
+Simple way to use gettext to translate user visible strings from Java code.
