@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-03-20 23:43+0100\n"
+"POT-Creation-Date: 2014-03-21 14:27+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,16 +18,17 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 
-#: example.java:7
-msgid "Usage: Example <number>"
+#: example.java:8
+msgid ""
+"Using default locale, pass locales as argument to test with other locales"
 msgstr ""
 
-#: example.java:11
+#: example.java:21
 msgid "Hello!"
 msgstr ""
 
-#: example.java:12
-msgid "%n second left."
-msgid_plural "%n seconds left."
+#: example.java:23
+msgid "%n file."
+msgid_plural "%n files."
 msgstr[0] ""
 msgstr[1] ""

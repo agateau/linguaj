@@ -47,7 +47,9 @@
                 <path location="${example-classes-dir}"/>
                 <path location="${jar-dir}/${ant.project.name}.jar"/>
             </classpath>
-            <arg value="2"/>
+            <arg value="en"/>
+            <arg value="fr"/>
+            <arg value="pl"/>
         </java>
     </target>
 </project>
