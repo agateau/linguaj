@@ -1,0 +1,39 @@
+<project name="gettext4j">
+    <property name="srcDir" value="src"/>
+    <property name="buildDir" value="build"/>
+    <property name="classesDir" value="${buildDir}/classes"/>
+    <property name="jarDir" value="${buildDir}/jar"/>
+
+    <property name="exampleDir" value="example"/>
+    <property name="example-classesDir" value="${buildDir}/example-classes"/>
+
+    <target name="clean">
+        <delete dir="${buildDir}"/>
+    </target>
+
+    <target name="compile">
+        <mkdir dir="${classesDir}"/>
+        <javac srcdir="${srcDir}" destdir="${classesDir}"/>
+    </target>
+
+    <target name="jar" depends="compile">
+        <mkdir dir="${jarDir}"/>
+        <jar destfile="${jarDir}/${ant.project.name}.jar" basedir="${classesDir}">
+        </jar>
+    </target>
+
+    <target name="example-compile" depends="jar">
+        <mkdir dir="${example-classesDir}"/>
+        <javac srcdir="${exampleDir}" destdir="${example-classesDir}" classpath="${jarDir}/${ant.project.name}.jar"/>
+    </target>
+
+    <target name="example-run" depends="example-compile">
+        <java fork="true" classname="Example">
+            <classpath>
+                <path location="${example-classesDir}"/>
+                <path location="${jarDir}/${ant.project.name}.jar"/>
+            </classpath>
+            <arg value="2"/>
+        </java>
+    </target>
+</project>
