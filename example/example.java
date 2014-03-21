@@ -1,6 +1,6 @@
-import com.agateau.gettext4j.Translator;
-import static com.agateau.gettext4j.Translator.tr;
-import static com.agateau.gettext4j.Translator.trn;
+import com.greenyetilab.babelyeti.Translator;
+import static com.greenyetilab.babelyeti.Translator.tr;
+import static com.greenyetilab.babelyeti.Translator.trn;
 
 class Example {
     public static void main(String[] args) {

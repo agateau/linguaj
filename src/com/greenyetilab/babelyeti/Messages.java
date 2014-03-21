@@ -1,4 +1,4 @@
-package com.agateau.gettext4j;
+package com.greenyetilab.babelyeti;
 
 import java.util.HashMap;
 

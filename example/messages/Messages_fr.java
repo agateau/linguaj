@@ -1,4 +1,4 @@
-public class Messages_fr extends com.agateau.gettext4j.Messages {
+public class Messages_fr extends com.greenyetilab.babelyeti.Messages {
     public Messages_fr() {
         plainEntries.put("Usage: Example <number>", "Utilisation : Example <nombre>");
         plainEntries.put("Hello!", "Bonjour !");
