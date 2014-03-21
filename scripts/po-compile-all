@@ -1,0 +1,38 @@
+#!/bin/sh
+set -e
+
+old_pwd=$PWD
+cd $(dirname $0)
+script_dir=$PWD
+cd $old_pwd
+
+die() {
+    echo "ERROR: $*" >&2
+    exit 1
+}
+
+usage() {
+    echo "$(basename $0) <src-po-dir> <dst-java-dir>"
+    exit 1
+}
+
+if [ $# != 2 ] ; then
+    usage
+fi
+
+src="$1"
+dst="$2"
+
+if [ ! -d "$src" ] ; then
+    die "'$src' is not a dir"
+fi
+
+if [ ! -d "$dst" ] ; then
+    die "'$dst' is not a dir"
+fi
+
+for po in $src/*.po ; do
+    echo "Compiling $po"
+    locale=$(basename $po .po)
+    $script_dir/po-compile -o $dst/Messages_$locale.java -l $locale $po
+done
