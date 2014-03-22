@@ -23,7 +23,7 @@ public class Translator {
             if (txt == null) {
                 txt = n == 1 ? singular : plural;
             }
-            return txt.replace("%n", String.valueOf(n));
+            return txt.replace("%#", String.valueOf(n));
         }
 
         private String findPluralTranslation(String singular, String plural, int n) {

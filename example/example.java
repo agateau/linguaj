@@ -20,7 +20,7 @@ class Example {
     private static void printMessage() {
         System.out.println(tr("Hello!"));
         for (int n=0; n < 10; ++n) {
-            System.out.println(trn("%n file.", "%n files.", n));
+            System.out.println(trn("%# file.", "%# files.", n));
         }
     }
 }
