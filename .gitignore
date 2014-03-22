@@ -2,3 +2,6 @@ build
 .swp
 *~
 example
+.classpath
+.project
+bin
