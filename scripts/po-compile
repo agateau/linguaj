@@ -39,6 +39,8 @@ def extract_plural_code(txt):
 
 
 def process(locale, pofile, out):
+    generator = os.path.basename(sys.argv[0])
+
     tmpl_path = os.path.join(os.path.dirname(__file__), "Messages.java.tmpl")
     with open(tmpl_path) as f:
         tmpl = jinja2.Template(f.read())
@@ -53,6 +55,7 @@ def process(locale, pofile, out):
         plain_entries=plain_entries,
         plural_entries=plural_entries,
         plural_code=plural_code,
+        generator=generator,
     ))
     out.write(txt.encode("utf-8"))
 
