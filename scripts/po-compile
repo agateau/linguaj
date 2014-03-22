@@ -12,6 +12,9 @@ import jinja2
 import polib
 
 DESCRIPTION = """\
+Generates .java files from .po files.
+
+The generated .java files can then be used with the Translator class.
 """
 
 ESCAPES = [
@@ -64,11 +67,13 @@ def parse_args():
     parser = argparse.ArgumentParser(description=DESCRIPTION)
 
     parser.add_argument("-o", "--output", default="-",
-        help="write code to FILE", metavar="FILE")
+        help="write code to FILE. Defaults to stdout.", metavar="FILE")
 
-    parser.add_argument("-l", "--locale")
+    parser.add_argument("-l", "--locale", required=True,
+        help="name of the locale (for example \"fr\" or \"pt_BR\"")
 
-    parser.add_argument("po_file")
+    parser.add_argument("po_file",
+        help="file to parse")
 
     return parser.parse_args()
 
