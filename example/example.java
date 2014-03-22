@@ -10,7 +10,7 @@ class Example {
         } else {
             for (int idx = 0; idx < args.length; ++idx) {
                 String locale = args[idx];
-                System.out.println("\n- " +   locale + "\n");
+                System.out.println("\n- " + locale + "\n");
                 Translator.init(locale);
                 printMessage();
             }
