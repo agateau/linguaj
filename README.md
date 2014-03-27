@@ -116,9 +116,9 @@ This is much better than using code like that:
     }
 
 Because that code fails for languages with different grammar rules for plural.
-For example French does not use an 's' when `number` is 0, Polish uses on plural
-form when `number` is between 2 and 4, and another form when it is between 5 and
-9.
+For example French does not use an 's' when `number` is 0, Polish uses one
+plural form when `number` is between 2 and 4, and another form when it is
+between 5 and 9.
 
 Linguaj comes with an example which demonstrates these different plural forms.
 You can try it by running `ant example-run`.
