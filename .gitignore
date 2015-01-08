@@ -6,3 +6,4 @@ build
 bin
 example/messages/
 .gradle
+*.iml
