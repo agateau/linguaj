@@ -1,0 +1,19 @@
+apply plugin: "java"
+
+project.ext.mainClassName = "Example"
+
+sourceSets.main.java.srcDirs = ["."]
+
+dependencies {
+    compile project(":linguaj")
+}
+
+task poCompile(type:Exec) {
+    commandLine "../scripts/po-compile-all", "po", "messages"
+}
+
+task run(dependsOn: [classes, poCompile], type: JavaExec) {
+    main = project.ext.mainClassName
+    classpath = sourceSets.main.runtimeClasspath
+    args = ["en", "fr", "pl"]
+}

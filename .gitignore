@@ -1,7 +1,8 @@
 build
 .swp
 *~
-example
 .classpath
 .project
 bin
+example/messages/
+.gradle
