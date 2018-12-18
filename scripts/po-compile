@@ -45,8 +45,15 @@ def escape_plural(dct):
 
 
 def extract_plural_code(txt):
+    """Generates the expression returned by the Messages.plural()
+    implmentation"""
     is_boolean = txt.startswith("nplurals=2")
     code = txt.split("plural=")[1]
+    # If `nplurals` is 2, `code` looks like this:
+    #   (n > 1);
+    # Since Messages.plural() expects the expression to be an int, we turn
+    # `code` into the condition of a ternary expression which evaluates to 1 or
+    # 0.
     if is_boolean:
         return code.strip(";") + " ? 1 : 0;"
     else:
