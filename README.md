@@ -24,7 +24,7 @@ You need to have gettext installed, or at least access to the xgettext tool.
 One of Linguaj components (scripts/po-compile) is written in Python and requires
 the [jinja2][] and [polib][] modules. Those can be installed with:
 
-    pip install polib jinja2
+    pip install -r requirements.txt
 
 If you are running Linux, they should be available as packages as well.
 

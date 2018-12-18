@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # encoding: utf-8
 
 """
@@ -16,10 +16,6 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 """
-
-# Python 2/3 compatibility
-from __future__ import division, absolute_import, print_function, unicode_literals
-
 import argparse
 import os
 import sys
@@ -76,7 +72,7 @@ def process(locale, pofile, out):
         plural_code=plural_code,
         generator=generator,
     ))
-    out.write(txt.encode("utf-8"))
+    out.write(txt)
 
 
 def parse_args():
