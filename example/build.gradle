@@ -9,6 +9,7 @@ dependencies {
 }
 
 task poCompile(type:Exec) {
+    mkdir "messages"
     commandLine "../scripts/po-compile-all", "po", "messages"
 }
 
