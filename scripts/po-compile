@@ -87,8 +87,8 @@ def process(locale, pofile, out):
 
     txt = tmpl.render(dict(
         locale=locale,
-        plain_entries=plain_entries,
-        plural_entries=plural_entries,
+        plain_entries=sorted(plain_entries),
+        plural_entries=sorted(plural_entries),
         plural_code=plural_code,
         generator=generator,
     ))
