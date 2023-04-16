@@ -5,7 +5,7 @@ project.ext.mainClassName = "Example"
 sourceSets.main.java.srcDirs = ["."]
 
 dependencies {
-    compile project(":linguaj")
+    implementation project(":linguaj")
 }
 
 task poCompile(type:Exec) {

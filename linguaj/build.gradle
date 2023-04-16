@@ -1,5 +1,5 @@
-apply plugin: "java"
+apply plugin: "java-library"
 
-sourceCompatibility = 1.6
+sourceCompatibility = JavaVersion.VERSION_1_8
 
 sourceSets.main.java.srcDirs = [ "src/" ]

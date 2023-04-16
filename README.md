@@ -35,8 +35,8 @@ If you are running Linux, they should be available as packages as well.
 
 ### Build With Linguaj
 
-Either create a .jar from the code with `ant jar`, or add a reference in your
-project to the `src/com` folder from this repository.
+Either create a `./gradlew build`, or add a reference in your project to the
+`:linguaj` folder from this repository.
 
 ### Mark Your Text as Translatable
 
