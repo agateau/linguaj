@@ -29,17 +29,18 @@ Generates .java files from .po files.
 The generated .java files can then be used with the Translator class.
 """
 
-ESCAPES = [
-    ('"', r'\"'),
-    ('\n', r'\n'),
-    ('\\', r'\\'),
-    ]
+ESCAPE_MAPPING = {
+    ord(k): v
+    for k, v in (
+        ('"', r'\"'),
+        ("\n", r"\n"),
+        ("\\", r"\\"),
+    )
+}
 
-
-def escape(txt):
-    for src, dst in ESCAPES:
-        txt = txt.replace(src, dst)
-    return txt
+def escape(src):
+    """Turn `src` into a valid Java string"""
+    return src.translate(ESCAPE_MAPPING)
 
 
 def escape_plural(dct):
